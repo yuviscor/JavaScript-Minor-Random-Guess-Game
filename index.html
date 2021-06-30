@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Guessing game</title>
+</head>
+
+<style>
+body{
+
+
+    background-color: black;
+    color: white;
+}
+.jumbo{
+
+
+
+align-items: center;
+margin:auto;
+
+text-align: center;
+
+border: 2px solid white;
+box-shadow: 22px 22px 22px wheat;
+
+
+height: 300px;
+width: 300px;
+
+margin-top: 200px;
+
+padding: 8px 18px 18px 18px;
+
+
+ 
+
+}
+#bt{
+
+ 
+ width: 120px;
+
+ height: 30px;
+
+ padding: 2px 2px 2px 2px;
+
+ color: white;
+ background-color: black;
+ border: 2px solid wheat;
+ box-shadow: 2px 2px 2px white;
+
+
+}
+
+
+</style>
+<body>
+    
+
+    <div class="jumbo">
+
+    <h1 id="ht">
+
+       Guess
+
+
+    </h1>
+<button id="bt">click me to play</button>
+
+    </div>
+
+<script>
+
+
+
+function click(){
+
+
+    while (true) {
+        var number = Number(prompt("Guess a number"));
+
+        var rand = Math.ceil(Math.random() * 10);
+
+        if (number == rand) {
+
+            document.getElementById("ht").innerText="Good guess";
+            break;
+
+        }
+        else {
+            alert("try again");
+
+        }
+}
+
+
+
+
+}
+    document.getElementById("bt").addEventListener("click", click);
+
+</script>    
+</body>
+</html>
